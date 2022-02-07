@@ -48,4 +48,4 @@ names(final)=c('Activity', 'Subject', features_names[interest, 2])
 tidy_data=summarize_all(group_by(final, Activity, Subject), mean)
 
 ##creates the final file
-write.table(tidy_data, 'tidy_data.txt')
+write.table(tidy_data, 'tidy_data.txt', row.names=FALSE)
