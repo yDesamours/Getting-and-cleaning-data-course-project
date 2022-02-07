@@ -29,8 +29,8 @@ complete_data = rbind(test, train)
 ##2)Extracts only the measurements on the mean and standard deviation for each measurement
 ##reads the features names
 features_names = read.table('UCI HAR Dataset/features.txt', header=FALSE) 
-##selects the columns to extract. The +2 is because 2 column were added at the left of the data set
-interest = c(grep('mean()', features_names[,2], fixed=TRUE), grep('std()', features_names[,2], fixed=TRUE))
+##selects the columns to extract.
+interest = c(grep('mean()', features_names[,2]), grep('std()', features_names[,2]))
 ##extract the columns of interest
 final=complete_data[c(1,2, interest+2)]
 
